@@ -20,12 +20,21 @@ main>section{
     margin-top: 130px;
 }
 .btn-pri{
-    width: 180px;
-    height: 64px;
+    width: 280px;
+    height: 94px;
     color: white;
     background-color: rgba(255, 144, 14, 1);
     margin-bottom: 20px;
-    border-radius: 20px;
+    border-radius: 10px;
+}
+
+.btn-pri2{
+    width: 300px;
+    height: 200px;
+    color: white;
+    background-color: rgba(255, 144, 14, 1);
+    margin-bottom: 20px;
+    border-radius: 10px;
 }
 
 .display{
@@ -86,7 +95,7 @@ main>section{
     margin-top: 10px;
 }
 .image{
-    width: 100%;
+    width: 90%;
 }
 
 /* maim  */
@@ -97,17 +106,107 @@ main>section{
 .quick{
     align-items: center;
     display: flex;
+    
+    
 }
 .image-container{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 24px;
+    
 }
 
-.Features{
-    margin-left: 30px;
+.features{
+    margin-left: 130px;
+    gap: 130px;
+
+}
+
+/* Features related area  */
+
+.feature{
+    display: flex;
+    gap: 100px;
+}
+
+#section-titile{
+    border-left: 8px solid chocolate;
+    padding-left: 15px;
+   
+}
+
+.feature-card{
+    padding: 30px;
+    box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+    margin-bottom: 20px;
+    border-radius: 8px;
+     
+}
+
+#experience-button{
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+#experience-year{
+    font-size: 4rem;
+    font-weight: 700;
+
+}
+.feature-architect img{
+    width: 100%;
+}
+
+/* Some fact related styless */
+.fact{
+    /* width: 241px;
+    height: 241px;
+    top: 3663px;
+    left: 1263px; */
+    border-radius: 8px;
+    /* color: rgb(241, 187, 9); */
+    border: 1px solid rgb(241, 187, 9);
+    /* width: 240px;
+    height: 240px; */
+    /* border: radius 8px; */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 24px;
+    width: 240px;
+    height: 240px;
+}
+
+.fact-container{
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.fact-number{
+    font-size: 1.5rem;
+}
+/* Sponssor area  */
+.sponsor{
+    text-align: center;
+    max-width: 540px;
+    align-items: center;
     margin: 0 auto;
 }
+
+.sponsor-companies{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+
+}
+.sponsor-companies img{
+    filter: grayscale(100%);
+}
+
+
+/* Responsive area  */
 
 @media screen and (max-width: 575px) {
 
@@ -115,7 +214,7 @@ main>section{
     .nav-links{
         flex-direction: column;
     } 
-    .image-container {
+    .image-container{
         grid-template-columns: repeat(1, 1fr);
     }
     
@@ -125,10 +224,48 @@ main>section{
         
     }
 
-.Features{
+    .feature{
+
+        flex-direction: column;
+    }
+
+
+.features{
     margin-left: 10px;
     /* width: ; */
 }
+.fact-container{
+    flex-direction: column;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+    align-items: center;
+}
+.sponsor-companies{
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+}
+#experience-button{
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+
+    
+}
+
+/* Medium size devices */
+@media screen and (min-width: 576px) and (max-width: 992px){
+    
+    .navbar, 
+    .nav-links{
+        flex-direction: column;
+    } 
+
+    .sponsor-companies, .fact-container{
+        grid-template-columns:repeat(2, 1fr);
+    }
 
     
 }
